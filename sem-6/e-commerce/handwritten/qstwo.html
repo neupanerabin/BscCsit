@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Store</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>E-commerce Store</h1>
+    <div class="product-list">
+        <h2>Product List</h2>
+        <ul id="product-list">
+            <li data-id="1">Rabin_Macbook_24109- Rs 200000.0 <button onclick="addToCart(1)">Add to Cart</button></li>
+            <li data-id="2">Rabin_Lenovo_24109 - Rs 190000.0 <button onclick="addToCart(2)">Add to Cart</button></li>
+            <li data-id="3">Rabin_Accer_24109  - Rs 180000.0   <button onclick="addToCart(3)">Add to Cart</button></li>
+        </ul>
+    </div>
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart">
+        </ul>
+        <button onclick="emptyCart()">Empty Cart</button>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: ' Rabin_Macbook_24109', price: 200000.0 },
+            { id: 2, name: ' Rabin_Lenovo_24109', price: 190000.0 },
+            { id: 3, name: 'Rabin_Accer_24109', price: 180000.0 },
+        ];
+
+        const cart = [];
+
+        function addToCart(productId) {
+            const productToAdd = products.find(product => product.id === productId);
+
+            if (productToAdd) {
+                cart.push(productToAdd);
+                updateCart();
+            }
+        }
+
+        function removeFromCart(productId) {
+            const productIndex = cart.findIndex(product => product.id === productId);
+
+            if (productIndex !== -1) {
+                cart.splice(productIndex, 1);
+                updateCart();
+            }
+        }
+
+        function emptyCart() {
+            cart.length = 0;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart');
+            cartList.innerHTML = '';
+
+            cart.forEach(product => {
+                const li = document.createElement('li');
+                li.textContent = `${product.name} - Rs ${product.price}`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = () => removeFromCart(product.id);
+                li.appendChild(removeButton);
+                cartList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

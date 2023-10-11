@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Store with Wish List</title>
+    <style>
+        /* Add some basic CSS styles for formatting */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #product-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>E-commerce Store</h1>
+
+    <!-- Product List -->
+    <div id="product-list">
+        <h2>Product List:</h2>
+        <ul id="products"></ul>
+    </div>
+
+    <!-- Wish List -->
+    <div id="wish-list">
+        <h2>Wish List:</h2>
+        <ul id="wish-list-items"></ul>
+    </div>
+
+    <script>
+        let products = [
+            { id: 1, name: ' Rabin_Macbook_24109', price: 200000.0, description: 'M2 chip 500gb ' },
+            { id: 2, name: ' Rabin_Lenovo_24109', price: 190000.0, description: ' 16GB RAM 512 ssd' },
+            { id: 3, name: 'Rabin_Accer_24109', price: 180000.0, description: ' 18Gb Ram 1Tb ssd' },
+
+        ];
+        let wishList = [];
+
+        function updateProductList() {
+            const productsList = document.getElementById("products");
+            productsList.innerHTML = "";
+
+            for (let i = 0; i < products.length; i++) {
+                const product = products[i];
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <strong>${product.name}</strong>
+                    <br>Price: Rs ${product.price.toFixed(2)} <!-- Change the currency symbol here -->
+                    <br>Description: ${product.description}
+                    <br><button type="button" onclick="addToWishList(${i})">Add to Wish List</button>
+                `;
+                productsList.appendChild(listItem);
+            }
+        }
+
+        function addToWishList(index) {
+            const productToAdd = products[index];
+            wishList.push(productToAdd);
+            updateWishList();
+        }
+
+        function updateWishList() {
+            const wishListItems = document.getElementById("wish-list-items");
+            wishListItems.innerHTML = "";
+
+            for (let i = 0; i < wishList.length; i++) {
+                const wishListItem = wishList[i];
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <strong>${wishListItem.name}</strong>
+                    <br>Price: Rs ${wishListItem.price.toFixed(2)} <!-- Change the currency symbol here -->
+                    <br>Description: ${wishListItem.description}
+                `;
+                wishListItems.appendChild(listItem);
+            }
+        }
+
+        // Initialize the product list on page load
+        updateProductList();
+    </script>
+</body>
+
+</html>

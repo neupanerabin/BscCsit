@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Store</title>
+</head>
+<body>
+    <h1>E-commerce Store</h1>
+
+    <!-- Product Form -->
+    <form id="product-form">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required>
+        <br>
+        <label for="productPrice">Price:</label>
+        <input type="number" id="productPrice" required>
+        <br>
+        <label for="productDescription">Description:</label>
+        <input type="text" id="productDescription" required>
+        <br>
+        <button type="button" onclick="addProduct()">Add Product</button>
+    </form>
+
+    <!-- Product List -->
+    <div id="product-list">
+        <h2>List of Products:</h2>
+        <ul id="products"></ul>
+    </div>
+
+    <!-- Search Form -->
+    <form id="search-form">
+        <label for="searchByName">Search by Name:</label>
+        <input type="text" id="searchByName">
+        <button type="button" onclick="searchProduct()">Search</button>
+    </form>
+
+    <!-- Search Results -->
+    <div id="search-results">
+        <h2>Search Results:</h2>
+        <ul id="searched-products"></ul>
+    </div>
+
+    <script>
+        let products = [];
+
+        function addProduct() {
+            const name = document.getElementById("productName").value;
+            const price = parseFloat(document.getElementById("productPrice").value);
+            const description = document.getElementById("productDescription").value;
+
+            if (name && price && description) {
+                const product = {
+                    name: name,
+                    price: price,
+                    description: description
+                };
+                products.push(product);
+                updateProductList();
+                clearProductForm();
+            }
+        }
+
+        function updateProductList() {
+            const productsList = document.getElementById("products");
+            productsList.innerHTML = "";
+
+            for (let i = 0; i < products.length; i++) {
+                const product = products[i];
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <strong>${product.name}</strong>
+                    <br>Price: Rs${product.price.toFixed(2)}
+                    <br>Description: ${product.description}
+                `;
+                productsList.appendChild(listItem);
+            }
+        }
+
+        function clearProductForm() {
+            document.getElementById("productName").value = "";
+            document.getElementById("productPrice").value = "";
+            document.getElementById("productDescription").value = "";
+        }
+
+        function searchProduct() {
+            const searchTerm = document.getElementById("searchByName").value.toLowerCase();
+            const searchResults = products.filter(product => product.name.toLowerCase().includes(searchTerm));
+            displaySearchResults(searchResults);
+        }
+
+        function displaySearchResults(results) {
+            const searchedProductsList = document.getElementById("searched-products");
+            searchedProductsList.innerHTML = "";
+
+            for (let i = 0; i < results.length; i++) {
+                const product = results[i];
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <strong>${product.name}</strong>
+                    <br>Price: Rs${product.price.toFixed(2)}
+                    <br>Description: ${product.description}
+                `;
+                searchedProductsList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>
