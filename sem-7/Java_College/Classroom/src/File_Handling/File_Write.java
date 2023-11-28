@@ -6,7 +6,7 @@ public class File_Write {
 
 	public static void main(String[] args) {
 
-		File file = new File("../FirstFile");	// Write into file
+		File file = new File("../Classroom/src/FirstFiless.txt");	// Write into file
 
 		// try catch used
 		try {

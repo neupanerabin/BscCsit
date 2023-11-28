@@ -8,9 +8,11 @@ public class Write_in_File {
 	public static void main(String[] args) {
 		
 		try {
-			FileWriter write = new FileWriter("../Hello.txt");
-			write.write("Writing in the java files");
-			write.close();
+			// file path
+			FileWriter write = new FileWriter("../Classroom/src/Hello.txt");
+			
+			write.write("Writing in the java files");	// Write inside in the file
+			write.close();	// To close the writer
 			System.out.println("File written successfully");
 			
 		} catch (IOException e) {
