@@ -4,14 +4,10 @@ package inheritance;
 public class Animal {
 //common attributes of all animals
 	protected String name;
-	protected int age;
-	protected double weight;
 
 //constructor
-	public Animal(String name, int age, double weight) {
+	public Animal(String name) {
 		this.name = name;
-		this.age = age;
-		this.weight = weight;
 	}
 
 //common behaviors of all animals
@@ -21,9 +17,5 @@ public class Animal {
 
 	public void sleep() {
 		System.out.println(name + " is sleeping.");
-	}
-
-	public void move() {
-		System.out.println(name + " is moving.");
 	}
 }
