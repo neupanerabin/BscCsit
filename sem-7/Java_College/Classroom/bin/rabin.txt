@@ -1,3 +1,1 @@
-rabin	kathmandu
-shyam	dhading
-sangu	nuwakot
+1Rabin	Kathmandu
