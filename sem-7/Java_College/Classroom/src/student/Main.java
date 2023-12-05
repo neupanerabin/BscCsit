@@ -2,7 +2,6 @@ package student;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JButton;
 
@@ -65,7 +64,7 @@ public class Main implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		/*
-		 * --> equired to provide an implementation for the actionPerformed method. This
+		 * --> required to provide an implementation for the actionPerformed method. This
 		 * method is called automatically by the Swing framework when the associated
 		 * event (in this case, a button click) occurs.
 		 */

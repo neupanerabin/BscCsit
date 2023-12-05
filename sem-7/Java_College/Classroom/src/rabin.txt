@@ -1,2 +1,6 @@
 1Rabin	Kathmandu
 	2	Sam	dhd
+	2	Sam	ktm
+	3	Bahu	Kalaanki
+			
+	4	Sangarsha	Nuwakot
