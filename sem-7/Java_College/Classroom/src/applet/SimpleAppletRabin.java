@@ -1,11 +1,13 @@
 package applet;
 
-import java.applet.Applet;
 import java.awt.Graphics;
+import javax.swing.JApplet;
 
-public class SimpleAppletRabin extends Applet{
+public class SimpleAppletRabin extends JApplet{
+	
 	public void paint(Graphics g) {
-		g.drawString("Hello Rabin", 150, 150);
+		super.paint(g);
+		
+		g.drawString("Welcome to java", 50, 200);
 	}
-
 }
