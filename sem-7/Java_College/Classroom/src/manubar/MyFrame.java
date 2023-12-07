@@ -2,6 +2,7 @@ package manubar;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
@@ -44,6 +45,10 @@ public class MyFrame extends JFrame implements ActionListener {
 		loadItems.addActionListener(this);
 		saveItems.addActionListener(this);
 		exitItems.addActionListener(this);
+		
+		loadItems.setMnemonic(KeyEvent.VK_L);  // L FOR LOAD
+		saveItems.setMnemonic(KeyEvent.VK_S);	// s for save
+		exitItems.setMnemonic(KeyEvent.VK_E);	// e for exit
 
 		// add MenuItems to menuBar
 		fileMenu.add(loadItems);
