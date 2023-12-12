@@ -11,7 +11,7 @@ public class Select {
 		// connection
 		final String DRIVER = "com.mysql.cj.jdbc.Driver"; // Driver link provided
 
-		//
+		// Database connection
 		final String DBNAME = "JavaCollege"; // Database table name
 		final String HOST = "localhost"; // hosting site
 		final String DBUSER = "root"; // database name
