@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="/Users/rabin/Downloads/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
 	<classpathentry kind="lib" path="/Users/rabin/Downloads/mail.jar"/>
 	<classpathentry kind="lib" path="/Users/rabin/Downloads/javax.activation-1.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/rabin/Downloads/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
