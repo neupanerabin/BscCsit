@@ -30,7 +30,7 @@ public class Mail {
 
 	private void sendEmail() throws MessagingException {
 		String fromUser = "rabinneupane07@gmail.com"; // Enter sender email id
-		String fromUserPassword = "egwj cqku vszs xxjt"; // Enter sender gmail password , this will be authenticated by gmail smtp
+		String fromUserPassword = "egwjmcqku vszs xxjt"; // Enter sender gmail password , this will be authenticated by gmail smtp
 											// server
 		String emailHost = "smtp.gmail.com";
 		Transport transport = newSession.getTransport("smtp");
