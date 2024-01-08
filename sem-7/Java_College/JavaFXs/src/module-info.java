@@ -1,11 +1,13 @@
 /**
- * 
+ *
  */
 /**
  * @author rabin
  *
  */
 module JavaFXs {
-	requires javafx.graphics;
-	requires javafx.controls;
+    requires javafx.controls;
+    requires javafx.fxml;
+
+    // other requires statements
 }
