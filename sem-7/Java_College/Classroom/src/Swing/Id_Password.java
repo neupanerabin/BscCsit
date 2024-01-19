@@ -19,7 +19,6 @@ public class Id_Password {
 		JButton button = new JButton("Submit");
 //        create objects
 		JTextField textField = new JTextField();
-
 		JPasswordField passfield = new JPasswordField(); // create for passwordField
 
 		// position set Display
