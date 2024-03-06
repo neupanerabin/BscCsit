@@ -30,8 +30,7 @@ public class Select {
 			System.out.println("PID\t\t Name\t\tAddress");
 
 			while (rs.next()) {
-				System.out
-						.println(rs.getInt("id") + "\t \t" + rs.getString("name") + "\t\t" + rs.getString("address"));
+				System.out.println(rs.getInt("id") + "\t \t" + rs.getString("name") + "\t\t" + rs.getString("address"));
 			}
 			rs.close();
 			state.close();
