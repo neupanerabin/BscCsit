@@ -22,14 +22,14 @@ public class Id_Password {
 		JPasswordField passfield = new JPasswordField(); // create for passwordField
 
 		// position set Display
-		name.setBounds(10, 20, 150, 30);	// name position
-		textField.setBounds(100, 20, 100, 30);	// name field position
+		name.setBounds(10, 20, 150, 30); // name position
+		textField.setBounds(100, 20, 100, 30); // name field position
 
-		password.setBounds(10, 45, 150, 30);	// Password position
-		passfield.setBounds(100, 45, 100, 30);	// password field Position
+		password.setBounds(10, 45, 150, 30); // Password position
+		passfield.setBounds(100, 45, 100, 30); // password field Position
 
-		button.setBounds(80, 100, 70, 50);	// Button position
-		
+		button.setBounds(80, 100, 70, 50); // Button position
+
 		// Action Listener to Submit
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
