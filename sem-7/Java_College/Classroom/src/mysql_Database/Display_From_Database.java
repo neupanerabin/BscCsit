@@ -36,7 +36,7 @@ public class Display_From_Database {
 			try (Connection conn = DriverManager.getConnection(URL, DBUSER, DBPASS)) {
 
 				// SQL query to retrieve data
-				String sql = "SELECT username FROM Login_Check";
+				String sql = "SELECT username FROM student_profile";
 				
 				// Prepared and execute the SQL statement
 				try (PreparedStatement statement = conn.prepareStatement(sql);

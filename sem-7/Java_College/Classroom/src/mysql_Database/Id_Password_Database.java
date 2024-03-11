@@ -22,18 +22,18 @@ public class Id_Password_Database {
 
 		// Database connection details
 		final String DBNAME = "JavaCollege"; // Database table name
-		final String HOST = "localhost"; // Database server  host
+		final String HOST = "localhost"; // Database server host
 		final String DBUSER = "root"; // database Username
 		final String DBPASS = "Neupane@11"; // Database password
-		final int PORT = 3306;	// Database port name
-		final String URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DBNAME;	// JDBC connection URL
-		
+		final int PORT = 3306; // Database port name
+		final String URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DBNAME; // JDBC connection URL
+
 		// JFrame and UI objects
 		JFrame frame = new JFrame("Login Application");
 		JLabel name = new JLabel(" Name:");
 		JLabel password = new JLabel("Password: ");
 		JButton button = new JButton("Submit");
-		
+
 		JTextField textField = new JTextField();
 		JPasswordField passfield = new JPasswordField(); // create for passwordField
 
@@ -50,36 +50,39 @@ public class Id_Password_Database {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-                    // Retrieve username and password from UI components
+					// Retrieve username and password from UI components
 
 					String username = textField.getText();
-                    char[] passwordChars = passfield.getPassword();
-                    String password = new String(passwordChars);
-                    
+					char[] passwordChars = passfield.getPassword();
+					String password = new String(passwordChars);
+
 					// JDBC connection SETUP
 					Class.forName(DRIVER); // Loading Driver
 					Connection conn = DriverManager.getConnection(URL, DBUSER, DBPASS); // Establish the connection
 
 					// Insert Records
 					Statement state = conn.createStatement(); // object create for connection
-					String sql = "SELECT * FROM Login_Check where username='"+ username +"' and password='"+ password +"'";
+					String sql = "SELECT * FROM student_profile where username='" + username + "' and password='"
+							+ password + "'";
 					ResultSet rs = state.executeQuery(sql); // Get all records from table
-					
+
 					// Create an instance
 					Display_From_Database tableData = new Display_From_Database();
-					
-					 if (rs.next()) {
-                         System.out.println(rs.getInt("id") + "\t \t" + rs.getString("username") + "\t\t" + rs.getString("password"));
-                         JOptionPane.showMessageDialog(null, "Login successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-                         tableData.show();	// Display data from database
-                     } else {
-                         System.out.println("Invalid login credentials");
-                         JOptionPane.showMessageDialog(null, "Invalid login credentials", "Error", JOptionPane.ERROR_MESSAGE);
-                     }
+
+					if (rs.next()) {
+						System.out.println(rs.getInt("id") + "\t \t" + rs.getString("username") + "\t\t"
+								+ rs.getString("password"));
+						JOptionPane.showMessageDialog(null, "Login successfully", "Success",
+								JOptionPane.INFORMATION_MESSAGE);
+						tableData.show(); // Display data from database
+					} else {
+						System.out.println("Invalid login credentials");
+						JOptionPane.showMessageDialog(null, "Invalid login credentials", "Error",
+								JOptionPane.ERROR_MESSAGE);
+					}
 					rs.close();
 					state.close();
 					conn.close();
-
 
 				} catch (SQLException ex) {
 					System.out.println(ex);
@@ -97,14 +100,12 @@ public class Id_Password_Database {
 		frame.add(password);
 		frame.add(passfield);
 		frame.add(button);
-		
+
 		// Set layout and display settings for the frame
 		frame.setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(300, 250);
 		frame.setVisible(true);
-
-		
 
 	}
 }
