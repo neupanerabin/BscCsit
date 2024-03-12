@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="27524233-0be6-4abf-8e81-ea1e44d74d5c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../sem-6/e-Governence/e-gov" beforeDir="false" afterPath="$PROJECT_DIR$/../../../sem-6/e-Governence/e-gov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP_Servlets/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP_Servlets/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP_Servlets/src/main/java/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP_Servlets/src/main/webapp/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP_Servlets/src/main/webapp/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP_Servlets/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP_Servlets/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP_Servlets/src/main/webapp/loginController.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP_Servlets/src/main/webapp/loginController.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_others/Assignment_2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_others/Assignment_2.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2da7QPCzwr2ERsdeqRVfTMxFWqk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/rabin/Bsc.CSIT/sem-7/Java_College/Classroom",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27524233-0be6-4abf-8e81-ea1e44d74d5c" name="Changes" comment="" />
+      <created>1710234320269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710234320269</updated>
+      <workItem from="1710234321543" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -13,11 +13,12 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Users/rabin/eclipse-workspace/ExternalJarFiles/mysql-connector-java-8.0.30.jar"/>
-	<classpathentry kind="lib" path="/Users/rabin/eclipse-workspace/apache-tomcat-10.1.17/lib/servlet-api.jar">
+	<classpathentry exported="true" kind="lib" path="/Users/rabin/Java ExternalJarFiles/mysql-connector-java-8.0.30.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/rabin/eclipse-workspace/apache-tomcat-10.1.17/lib/servlet-api.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/6.0/apidocs/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/rabin/Java ExternalJarFiles/javax.servlet.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -9,5 +9,11 @@
 	<classpathentry kind="lib" path="/Users/rabin/Java ExternalJarFiles/mail.jar"/>
 	<classpathentry kind="lib" path="/Users/rabin/Java ExternalJarFiles/javafx-sdk-21.0.1/lib/javafx.swing.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/rabin/Java ExternalJarFiles/mysql-connector-java-8.0.30.jar"/>
+	<classpathentry kind="lib" path="/Users/rabin/Java ExternalJarFiles/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="/Users/rabin/eclipse-workspace/apache-tomcat-10.1.17/lib/servlet-api.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/6.0/apidocs/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
